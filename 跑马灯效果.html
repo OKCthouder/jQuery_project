@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<html xmlns="http://www.w3.org/1999/xhtml">  
+<head>    
+    <title>>>>欢迎你能够来学习>>> >>>JavaScript是一门脚本语言>>>    
+    </title> 
+    <meta charset="utf-8">   
+</head>    
+<body>    
+    <div id="wenzi">    
+    </div>    
+        
+<script type="text/javascript">  
+  
+    var meninfo = " 欢迎你能够来学习 JavaScript是一门脚本语言";  
+    var info = "欢迎你能够来学习 JavaScript是一门脚本语言";  
+  
+    function setSatatus() {  
+        document.title = info.substring(0, info.length);  //设置title    
+        info = info + info.substring(0, 1);  
+        info = info.substring(1, info.length);  
+    }  
+  
+    setInterval(setSatatus, 500);  
+  
+    function left() {  
+        var id = document.getElementById("wenzi");  
+        if (typeof id.textContent == "string") {  
+            id.textContent = meninfo.substring(0, meninfo.length);  
+        } else {  
+            id.innerText = meninfo.substring(0, meninfo.length);  
+        }  
+        meninfo = meninfo + meninfo.substring(0, 1);  
+        meninfo = meninfo.substring(1, meninfo.length);  
+    }  
+  
+  
+    setInterval(left, 500)    
+</script>    
+    
+</body>    
+</html>
